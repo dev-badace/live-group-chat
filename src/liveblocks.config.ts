@@ -34,7 +34,10 @@ export type Presence = {
 };
 
 type Storage = {};
-export type UserMeta = { username: string; bot?: boolean } & BaseUserMeta;
+export type UserMeta = {
+  id?: string;
+  info: { username: string; bot?: boolean };
+};
 
 type BroadcastEvent = {
   type: "message";
